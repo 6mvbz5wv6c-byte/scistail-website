@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scissortail Technology — Pipeline Intelligence, Delivered</title>
+  <meta name="description" content="Scissortail Technology builds next-generation remote tracking devices and pipeline monitoring systems for inline inspection. Real-time pig tracking, cloud-connected fleet management, and field-proven sensors.">
+  <link rel="icon" type="image/png" href="assets/images/geode_logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { DEFAULT: '#C8A84E', light: '#D4BA6A', pale: '#E8D9A0' },
+            charcoal: '#1A1A1A',
+            dark: '#2A2A2A',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900" x-data="{ mobileOpen: false }">
+
+  <!-- Navigation — centered logo with links below -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-black/90" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 60)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Logo row -->
+      <div class="flex items-center justify-center pt-4 pb-2 transition-all duration-300" :class="scrolled ? 'pt-2 pb-1' : 'pt-4 pb-2'">
+        <a href="index.html">
+          <img src="assets/images/scissortail.png" alt="Scissortail Technology" class="w-auto transition-all duration-300" :class="scrolled ? 'h-28' : 'h-[220px]'">
+        </a>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden absolute right-4 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path x-show="mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Links row -->
+      <div class="hidden md:flex items-center justify-center gap-10 pb-3 border-t border-white/5 pt-2">
+        <a href="index.html" class="text-wheat font-medium text-sm tracking-wide uppercase">Home</a>
+        <a href="products.html" class="text-gray-400 hover:text-white text-sm tracking-wide uppercase transition">Products</a>
+        <a href="about.html" class="text-gray-400 hover:text-white text-sm tracking-wide uppercase transition">About</a>
+        <a href="#contact" class="btn-primary text-sm !py-1.5 !px-5">Contact Us</a>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu md:hidden" :class="mobileOpen ? 'open' : ''">
+        <div class="pb-4 space-y-2 border-t border-white/5 pt-3">
+          <a href="index.html" class="block px-3 py-2 text-wheat font-medium text-sm">Home</a>
+          <a href="products.html" class="block px-3 py-2 text-gray-400 text-sm">Products</a>
+          <a href="about.html" class="block px-3 py-2 text-gray-400 text-sm">About</a>
+          <a href="#contact" class="block px-3 py-2 text-wheat text-sm font-medium">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient min-h-[90vh] flex items-center pt-44">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 text-center">
+      <br>
+      <br>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight">
+        Stop Chasing Boxes.<br>
+        <span style="color: #7BA7CC;">Start Seeing</span> Your Pipeline.
+      </h1>
+      <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Cloud-connected remote tracking devices, precision sensors, and fleet management for inline pipeline inspection. Real-time pig tracking from anywhere.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="products.html" class="btn-primary">Explore Products</a>
+        <a href="#contact" class="btn-secondary">Request a Demo</a>
+      </div>
+      <div class="mt-12 grid grid-cols-3 gap-8 max-w-lg mx-auto">
+        <div>
+          <div class="text-3xl font-black text-white stat-number">8</div>
+          <div class="text-sm text-steel mt-1">Sensor Channels</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-white stat-number">50ms</div>
+          <div class="text-sm text-steel mt-1">Timestamp Precision</div>
+        </div>
+        <div>
+          <div class="text-3xl font-black text-white stat-number">LTE-M</div>
+          <div class="text-sm text-steel mt-1">Always Connected</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Statement -->
+  <section class="py-20 bg-[#F5F3EE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-black">The Cost of Running Blind</h2>
+        <p class="mt-4 text-gray-600 text-lg">Every pig run, operators gamble on equipment that can't talk back.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200/60">
+          <div class="text-3xl font-black text-gold">$1K&ndash;$20K</div>
+          <p class="mt-2 text-sm text-gray-600">Cost of a missed passage including redrives, inaccurate excavations, fuel, labor, and overages.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200/60">
+          <div class="text-3xl font-black text-gold">4&ndash;8 hrs</div>
+          <p class="mt-2 text-sm text-gray-600">Wasted driving to check AGMs that were dead on arrival.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200/60">
+          <div class="text-3xl font-black text-gold">20+</div>
+          <p class="mt-2 text-sm text-gray-600">AGMs deployed per run with zero remote visibility into their status.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200/60">
+          <div class="text-3xl font-black text-gold">Days</div>
+          <p class="mt-2 text-sm text-gray-600">Before you discover a device failed &mdash; when it's already too late.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Overview -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="accent-line mb-6"></div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-black">One Device.<br>Every Detection Method.</h2>
+          <p class="mt-4 text-gray-600 text-lg">The Geode RTD combines four independent sensor channels in one compact, solar-powered, cloud-connected package.</p>
+          <div class="mt-8 space-y-6">
+            <div class="flex gap-4">
+              <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+              <div>
+                <h3 class="font-semibold text-black">ELF Transmitter Detection</h3>
+                <p class="text-sm text-gray-600 mt-1">Custom coil picks up 15&ndash;35Hz pig transmitter pulses through soil and steel. Software configurable.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div>
+              <div>
+                <h3 class="font-semibold text-black">Acoustic Geophone + MEMS</h3>
+                <p class="text-sm text-gray-600 mt-1">Dual-technology weld-strike detection for velocity calculation. Works on every pig type.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+              <div>
+                <h3 class="font-semibold text-black">3-Axis Magnetometer</h3>
+                <p class="text-sm text-gray-600 mt-1">Detects ILI pig magnets with bipolar signature. Zero-crossing gives the most precise passage timestamp.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#0A0A0A] rounded-2xl p-8 text-white">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b-2 border-white/10">
+                <th class="text-left text-gray-500 font-medium pb-4">Capability</th>
+                <th class="text-right text-red-400 font-semibold pb-4">Legacy AGM</th>
+                <th class="text-right text-wheat font-semibold pb-4">Geode RTD</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="border-b border-white/5 bg-white/[0.02]"><td class="text-gray-300 py-3">Real-time data</td><td class="text-right text-red-400/80 py-3">No</td><td class="text-right text-wheat font-semibold py-3">Yes</td></tr>
+              <tr class="border-b border-white/5"><td class="text-gray-300 py-3">Remote fleet visibility</td><td class="text-right text-red-400/80 py-3">None</td><td class="text-right text-wheat font-semibold py-3">Full dashboard</td></tr>
+              <tr class="border-b border-white/5 bg-white/[0.02]"><td class="text-gray-300 py-3">Detection methods</td><td class="text-right text-red-400/80 py-3">1</td><td class="text-right text-wheat font-semibold py-3">4</td></tr>
+              <tr class="border-b border-white/5"><td class="text-gray-300 py-3">Timestamp precision</td><td class="text-right text-red-400/80 py-3">Varies</td><td class="text-right text-wheat font-semibold py-3">50ms</td></tr>
+              <tr class="border-b border-white/5 bg-white/[0.02]"><td class="text-gray-300 py-3">Remote state control</td><td class="text-right text-red-400/80 py-3">No</td><td class="text-right text-wheat font-semibold py-3">Yes</td></tr>
+              <tr class="border-b border-white/5"><td class="text-gray-300 py-3">Deploy confirmation</td><td class="text-right text-red-400/80 py-3">Walk up</td><td class="text-right text-wheat font-semibold py-3">GPS + LTE</td></tr>
+              <tr><td class="text-gray-300 py-3">Power management</td><td class="text-right text-red-400/80 py-3">On/Off</td><td class="text-right text-wheat font-semibold py-3">Smart modes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deployment Workflow -->
+  <section class="py-20 bg-[#F5F3EE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-black">Deploy 20 Units Before Lunch</h2>
+        <p class="mt-4 text-gray-600 text-lg">Watch them all from the truck.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center"><div class="w-16 h-16 rounded-full bg-gold text-black flex items-center justify-center text-2xl font-black mx-auto">1</div><h3 class="mt-4 font-bold text-black">Power On</h3><p class="mt-2 text-sm text-gray-600">Press the button. Place at survey location. WiFi appears in seconds.</p></div>
+        <div class="text-center"><div class="w-16 h-16 rounded-full bg-gold text-black flex items-center justify-center text-2xl font-black mx-auto">2</div><h3 class="mt-4 font-bold text-black">Confirm</h3><p class="mt-2 text-sm text-gray-600">Connect to WiFi. Check battery, GPS, network, and sensors from your phone.</p></div>
+        <div class="text-center"><div class="w-16 h-16 rounded-full bg-gold text-black flex items-center justify-center text-2xl font-black mx-auto">3</div><h3 class="mt-4 font-bold text-black">Walk Away</h3><p class="mt-2 text-sm text-gray-600">Device reports to cloud. Solar-charged battery. Ready for the run.</p></div>
+        <div class="text-center"><div class="w-16 h-16 rounded-full bg-gold text-black flex items-center justify-center text-2xl font-black mx-auto">4</div><h3 class="mt-4 font-bold text-black">Monitor</h3><p class="mt-2 text-sm text-gray-600">Live dashboard. Real-time charts. Passage alerts. Battery status.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Features -->
+  <section class="py-20 hero-gradient">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">Pigtracks <span class="text-steel">Cloud Platform</span></h2>
+        <p class="mt-4 text-gray-400 text-lg">Monitor your entire fleet from one screen. Enterprise-grade security.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white/5 backdrop-blur rounded-xl p-6 border border-gold/10">
+          <div class="text-wheat mb-3"><svg class="w-8 h-8" fill="none" stroke="#E97132" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+          <h3 class="font-semibold text-white">Live Dashboard</h3>
+          <p class="mt-2 text-sm text-gray-400">Battery, signal, GPS, and sensor status for every device on one screen.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur rounded-xl p-6 border border-gold/10">
+          <div class="text-wheat mb-3"><svg class="w-8 h-8" fill="none" stroke="#E97132" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+          <h3 class="font-semibold text-white">Remote Control</h3>
+          <p class="mt-2 text-sm text-gray-400">Switch between standby, streaming, and sleep modes. No truck roll.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur rounded-xl p-6 border border-gold/10">
+          <div class="text-wheat mb-3"><svg class="w-8 h-8" fill="none" stroke="#E97132" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg></div>
+          <h3 class="font-semibold text-white">Automatic Alerts</h3>
+          <p class="mt-2 text-sm text-gray-400">Low battery, LTE failure, enclosure breach. Know immediately, not days later.</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur rounded-xl p-6 border border-gold/10">
+          <div class="text-wheat mb-3"><svg class="w-8 h-8" fill="none" stroke="#E97132" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg></div>
+          <h3 class="font-semibold text-white">Fleet Management</h3>
+          <p class="mt-2 text-sm text-gray-400">Organize by pipeline, project, or customer. Generate passage reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="accent-line mx-auto mb-6"></div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-black">Ready to See It in Action?</h2>
+      <p class="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">We'll deploy Geode RTDs on your next pig run.
+      <br>
+      Real sensors, real data, real time.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="bg-[#F5F3EE] p-6 rounded-xl"><h3 class="font-bold text-black">Solution Demo</h3><p class="mt-2 text-sm text-gray-600">See deployment, monitoring, and cloud apps on a real pig run.</p></div>
+        <div class="bg-[#F5F3EE] p-6 rounded-xl"><h3 class="font-bold text-black">Technical Deep-Dive</h3><p class="mt-2 text-sm text-gray-600">Sensor specs, integration points, API access. Your team meets ours.</p></div>
+        <div class="bg-[#F5F3EE] p-6 rounded-xl"><h3 class="font-bold text-black">Partnership</h3><p class="mt-2 text-sm text-gray-600">White-label terms, volume pricing, fleet migration planning.</p></div>
+      </div>
+      <a href="mailto:info@scistail.com" class="btn-primary mt-10 text-lg !py-4 !px-10">Contact Scissortail</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0A0A0A] text-gray-500 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <img src="assets/images/scissortail.png" alt="Scissortail Technology" class="h-20 w-auto">
+      </div>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div><p class="text-sm">Pipeline intelligence, delivered.<br> Built for the field.</p></div>
+        <div>
+          <h4 class="text-wheat font-semibold mb-3 text-sm uppercase tracking-wider">Products</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html#geode">Geode RTD</a></li>
+            <li><a href="products.html#geophone">External Geophone</a></li>
+            <li><a href="products.html#elf-coil">ELF Swamp Coil</a></li>
+            <li><a href="products.html#pigtracks">Pigtracks Platform</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-wheat font-semibold mb-3 text-sm uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-wheat font-semibold mb-3 text-sm uppercase tracking-wider">Contact</h4>
+          <ul class="space-y-2 text-sm"><li>info@scistail.com</li><li>scistail.com</li></ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 mt-10 pt-8 text-sm text-gray-600">&copy; 2026 Scissortail Technology. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.page-section').forEach(s => observer.observe(s));
+    });
+  </script>
+</body>
+</html>

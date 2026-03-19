@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Scissortail Technology</title>
+  <meta name="description" content="Scissortail Technology builds field-proven pipeline monitoring hardware and software. Founded by pipeline professionals, built for the field.">
+  <link rel="icon" type="image/png" href="assets/images/geode_logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        gold: { DEFAULT: '#C8A84E', light: '#D4BA6A', pale: '#E8D9A0' },
+        charcoal: '#1A1A1A',
+        dark: '#2A2A2A',
+      }}}
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900" x-data="{ mobileOpen: false }">
+
+  <!-- Navigation — centered logo with links below -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-black/90" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 60)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center pt-4 pb-2 transition-all duration-300" :class="scrolled ? 'pt-2 pb-1' : 'pt-4 pb-2'">
+        <a href="index.html">
+          <img src="assets/images/scissortail.png" alt="Scissortail Technology" class="w-auto transition-all duration-300" :class="scrolled ? 'h-24' : 'h-[130px]'">
+        </a>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden absolute right-4 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path x-show="mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden md:flex items-center justify-center gap-10 pb-3 border-t border-white/5 pt-2">
+        <a href="index.html" class="text-gray-400 hover:text-white text-sm tracking-wide uppercase transition">Home</a>
+        <a href="products.html" class="text-gray-400 hover:text-white text-sm tracking-wide uppercase transition">Products</a>
+        <a href="about.html" class="text-wheat font-medium text-sm tracking-wide uppercase">About</a>
+        <a href="index.html#contact" class="btn-primary text-sm !py-1.5 !px-5">Contact Us</a>
+      </div>
+      <div class="mobile-menu md:hidden" :class="mobileOpen ? 'open' : ''">
+        <div class="pb-4 space-y-2 border-t border-white/5 pt-3">
+          <a href="index.html" class="block px-3 py-2 text-gray-400 text-sm">Home</a>
+          <a href="products.html" class="block px-3 py-2 text-gray-400 text-sm">Products</a>
+          <a href="about.html" class="block px-3 py-2 text-wheat font-medium text-sm">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient pt-44 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="accent-line mb-6"></div>
+      <br>
+      <br>
+      <h1 class="text-4xl sm:text-5xl font-black text-white">About Scissortail</h1>
+      <p class="mt-4 text-gray-400 text-lg max-w-2xl">Built by pipeline people, for pipeline people.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="accent-line mb-6"></div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-black">We've Been Where You Are</h2>
+          <p class="mt-6 text-gray-600 text-lg leading-relaxed">
+            Scissortail Technology was founded by inline inspection professionals who spent years deploying legacy AGMs on pig runs across North America. We watched SD cards fail, batteries die overnight, and operators waste entire days chasing boxes that couldn't report their own status.
+          </p>
+          <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+            We built the Geode because we needed it ourselves. Every design decision comes from real field experience &mdash; from the solar panel angle to the sensor placement to the cloud dashboard layout. This isn't a lab product. It's a field product, built by field people.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-10">
+          <div class="space-y-8">
+            <div>
+              <div class="text-4xl font-black text-gold">2026</div>
+              <div class="text-gray-600 mt-1">Company founded in Oklahoma</div>
+            </div>
+            <div>
+              <div class="text-4xl font-black text-gold">20+</div>
+              <div class="text-gray-600 mt-1">Years of pigging experience on the team</div>
+            </div>
+            <div>
+              <div class="text-4xl font-black text-gold">100%</div>
+              <div class="text-gray-600 mt-1">In-house hardware, firmware, and cloud development</div>
+            </div>
+            <div>
+              <div class="text-4xl font-black text-gold">0</div>
+              <div class="text-gray-600 mt-1">Times you should have to drive to check on an AGM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-black">What We Believe</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+          <div class="feature-icon mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-black">Field First</h3>
+          <p class="mt-3 text-gray-600">Every feature earns its place by surviving mud, rain, and a technician's boot. If it doesn't work at mile marker 47 in February, it doesn't ship.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+          <div class="feature-icon mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-black">Timestamp Integrity</h3>
+          <p class="mt-3 text-gray-600">A pig passage timestamp is worth millions in corrosion remediation. Our entire architecture protects the clock chain from NTP to RTC to cloud with sub-100ms precision.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+          <div class="feature-icon mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-black">Your Brand, Your Customer</h3>
+          <p class="mt-3 text-gray-600">We're a technology partner, not a competitor. White-label ready from day one. Your logo, your customer relationship. We stay behind the curtain and handle the hard stuff.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="accent-line mb-6"></div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-black mb-12">Technology <span style="color: #7BA7CC;">Stack</span></h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="font-bold text-black text-sm uppercase tracking-wide">Hardware</h3>
+          <p class="mt-3 text-sm text-gray-600">Custom PCB with integrated LTE-M modem, high-resolution analog front end, GNSS, and intelligent solar charge management.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="font-bold text-black text-sm uppercase tracking-wide">Firmware</h3>
+          <p class="mt-3 text-sm text-gray-600">Real-time embedded firmware with high-speed sensor acquisition, lossless data compression, NTP-synced precision clock, and intelligent multi-mode power management.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="font-bold text-black text-sm uppercase tracking-wide">Cloud</h3>
+          <p class="mt-3 text-sm text-gray-600">Azure IoT Hub. MQTT over TLS. Device twin state management. Binary waveform streaming. Enterprise security and compliance.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <h3 class="font-bold text-black text-sm uppercase tracking-wide">Application</h3>
+          <p class="mt-3 text-sm text-gray-600">Pigtracks web platform. Real-time chart rendering. Fleet management dashboard. Passage time marking and correlation with ILI pig data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership -->
+  <section class="py-20 hero-gradient">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="accent-line mb-6"></div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Partnership Model</h2>
+          <p class="mt-4 text-gray-400 text-lg">Scissortail handles firmware updates, cloud infrastructure, and hardware support. You focus on your customers.</p>
+          <div class="mt-8 space-y-6">
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
+              <div>
+                <h3 class="font-semibold text-white">White-Label Ready</h3>
+                <p class="text-sm text-gray-400 mt-1">Your logo, your packaging, your customer relationship. We manufacture under your brand.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
+              <div>
+                <h3 class="font-semibold text-white">Bundle Into Projects</h3>
+                <p class="text-sm text-gray-400 mt-1">Include RTD monitoring as a line item in your ILI bids. Differentiate on data quality. Command premium pricing.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
+              <div>
+                <h3 class="font-semibold text-white">Replace Legacy Fleets</h3>
+                <p class="text-sm text-gray-400 mt-1">Swap aging CDI/IRED AGM inventory for Geode RTDs. Same field workflow, dramatically better data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-10 border border-white/5">
+          <img src="assets/images/geode_logo.png" alt="Geode" class="h-12 w-auto mb-6 invert">
+          <h3 class="text-2xl font-bold text-white">Ready to talk?</h3>
+          <p class="mt-3 text-gray-400">We'll demonstrate deployment, monitoring, and cloud applications on a real pig run. You see real data, real time.</p>
+          <a href="index.html#contact" class="btn-primary mt-6">Start the Conversation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers -->
+  <section id="careers" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="accent-line mx-auto mb-6"></div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-black">Join Scissortail</h2>
+      <p class="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+        We're a small team building real hardware that ships to real pipelines. If you're an embedded engineer, full-stack developer, or field operations expert who wants to build things that matter, we want to hear from you.
+      </p>
+      <a href="mailto:careers@scistail.com" class="btn-primary mt-8">careers@scistail.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0A0A0A] text-gray-500 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/scissortail.png" alt="Scissortail Technology" class="h-16 w-auto">
+          </div>
+          <p class="text-sm">Pipeline intelligence, delivered. Built for the field.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm">Products</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="products.html#geode" class="hover:text-white transition">Geode RTD</a></li>
+            <li><a href="products.html#geophone" class="hover:text-white transition">External Geophone</a></li>
+            <li><a href="products.html#elf-coil" class="hover:text-white transition">ELF Swamp Coil</a></li>
+            <li><a href="products.html#pigtracks" class="hover:text-white transition">Pigtracks Platform</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="#careers" class="hover:text-white transition">Careers</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>info@scistail.com</li>
+            <li>scistail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 mt-8 pt-8 text-sm text-center">
+        &copy; 2026 Scissortail Technology. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

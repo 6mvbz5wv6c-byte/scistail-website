@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scissortail Technology — Brand Palette</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none; }
+    }
+    @page { size: letter; margin: 0.75in; }
+    .swatch { width: 100%; aspect-ratio: 1.6; border-radius: 12px; display: flex; align-items: flex-end; padding: 12px 16px; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 max-w-4xl mx-auto px-8 py-12">
+
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-2">
+    <div>
+      <h1 class="text-3xl font-black tracking-tight">Brand Palette</h1>
+      <p class="text-gray-500 text-sm mt-1">Scissortail Technology — Visual Identity Reference</p>
+    </div>
+    <img src="assets/images/scissortail.png" alt="Scissortail" class="h-16 w-auto" style="filter: brightness(0.3);">
+  </div>
+  <div class="accent-line mb-10"></div>
+
+  <!-- Print button -->
+  <div class="no-print mb-8">
+    <button onclick="window.print()" class="btn-primary text-sm !py-2 !px-6">Save as PDF (Print)</button>
+    <span class="text-gray-400 text-sm ml-4">Use browser Print &rarr; Save as PDF</span>
+  </div>
+
+  <!-- Logos -->
+  <section class="mb-12">
+    <h2 class="text-lg font-bold uppercase tracking-wider text-gray-400 mb-6">Logos</h2>
+    <div class="grid grid-cols-2 gap-6">
+      <div class="bg-[#0A0A0A] rounded-xl p-8 flex items-center justify-center">
+        <img src="assets/images/scissortail.png" alt="Scissortail — on dark" class="h-24 w-auto">
+      </div>
+      <div class="bg-[#F5F3EE] rounded-xl p-8 flex items-center justify-center">
+        <img src="assets/images/scissortail.png" alt="Scissortail — on light" class="h-24 w-auto" style="filter: brightness(0.25);">
+      </div>
+      <div class="bg-[#0A0A0A] rounded-xl p-8 flex items-center justify-center">
+        <img src="assets/images/geode_logo.png" alt="Geode — on dark" class="h-14 w-auto invert">
+      </div>
+      <div class="bg-white rounded-xl p-8 flex items-center justify-center border border-gray-200">
+        <img src="assets/images/geode_logo.png" alt="Geode — on light" class="h-14 w-auto">
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6 mt-2 text-xs text-gray-400">
+      <div class="text-center">Scissortail wordmark — dark backgrounds</div>
+      <div class="text-center">Scissortail wordmark — light backgrounds (darken to ~25% brightness)</div>
+      <div class="text-center">Geode product mark — dark backgrounds (invert)</div>
+      <div class="text-center">Geode product mark — light backgrounds</div>
+    </div>
+  </section>
+
+  <!-- Primary Palette -->
+  <section class="mb-12">
+    <h2 class="text-lg font-bold uppercase tracking-wider text-gray-400 mb-6">Primary Palette</h2>
+    <div class="grid grid-cols-3 gap-6">
+      <div>
+        <div class="swatch" style="background: #0A0A0A;">
+          <span class="text-white text-sm font-semibold">Black</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-sm font-semibold">#0A0A0A</div>
+          <div class="text-xs text-gray-400">rgb(10, 10, 10)</div>
+          <div class="text-xs text-gray-400 mt-1">Backgrounds, nav, footer, hero sections</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #C8A84E;">
+          <span class="text-black text-sm font-semibold">Gold</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-sm font-semibold">#C8A84E</div>
+          <div class="text-xs text-gray-400">rgb(200, 168, 78)</div>
+          <div class="text-xs text-gray-400 mt-1">Primary accent, buttons, icons on light bg</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #7BA7CC;">
+          <span class="text-white text-sm font-semibold">Steel Blue</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-sm font-semibold">#7BA7CC</div>
+          <div class="text-xs text-gray-400">rgb(123, 167, 204)</div>
+          <div class="text-xs text-gray-400 mt-1">Secondary accent, highlights, headings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supporting Palette -->
+  <section class="mb-12">
+    <h2 class="text-lg font-bold uppercase tracking-wider text-gray-400 mb-6">Supporting Palette</h2>
+    <div class="grid grid-cols-4 gap-4">
+      <div>
+        <div class="swatch" style="background: #F8EFDA;">
+          <span class="text-gray-600 text-xs font-semibold">Wheat</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-xs font-semibold">#F8EFDA</div>
+          <div class="text-xs text-gray-400">Logo color. Text on dark bg.</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #D4BA6A;">
+          <span class="text-black text-xs font-semibold">Gold Light</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-xs font-semibold">#D4BA6A</div>
+          <div class="text-xs text-gray-400">Button hover state.</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #1A1A1A;">
+          <span class="text-gray-400 text-xs font-semibold">Charcoal</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-xs font-semibold">#1A1A1A</div>
+          <div class="text-xs text-gray-400">Dark section backgrounds.</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #F5F3EE; border: 1px solid #E8E4DA;">
+          <span class="text-gray-500 text-xs font-semibold">Warm Gray</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-xs font-semibold">#F5F3EE</div>
+          <div class="text-xs text-gray-400">Light section backgrounds.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage Rules -->
+  <section class="mb-12">
+    <h2 class="text-lg font-bold uppercase tracking-wider text-gray-400 mb-6">Color Usage</h2>
+    <div class="grid grid-cols-2 gap-8 text-sm">
+      <div>
+        <h3 class="font-bold mb-3">On Dark Backgrounds</h3>
+        <div class="bg-[#0A0A0A] rounded-xl p-6 space-y-3">
+          <div style="color: #F8EFDA;" class="font-semibold">Wheat #F8EFDA — headings, nav links, table values</div>
+          <div style="color: #7BA7CC;">Steel Blue #7BA7CC — accent text, highlights, labels</div>
+          <div style="color: #C8A84E;">Gold #C8A84E — buttons, icons, accent lines</div>
+          <div class="text-gray-400">Gray-400 — body text</div>
+          <div class="text-gray-500">Gray-500 — secondary text</div>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold mb-3">On Light Backgrounds</h3>
+        <div class="bg-[#F5F3EE] rounded-xl p-6 space-y-3">
+          <div class="text-black font-semibold">Black #0A0A0A — headings</div>
+          <div style="color: #C8A84E;" class="font-semibold">Gold #C8A84E — stat numbers, icons, accent lines</div>
+          <div style="color: #7BA7CC;">Steel Blue #7BA7CC — secondary headings, tags</div>
+          <div class="text-gray-600">Gray-600 — body text</div>
+          <div class="text-gray-400">Gray-400 — captions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pigtracks Sub-brand -->
+  <section class="mb-12">
+    <h2 class="text-lg font-bold uppercase tracking-wider text-gray-400 mb-6">Pigtracks Sub-brand</h2>
+    <p class="text-sm text-gray-500 mb-4">The Pigtracks cloud platform uses its own color scheme, separate from the Scissortail corporate palette.</p>
+    <div class="grid grid-cols-3 gap-6">
+      <div>
+        <div class="swatch" style="background: #0E2841;">
+          <span class="text-white text-sm font-semibold">Navy</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-sm font-semibold">#0E2841</div>
+          <div class="text-xs text-gray-400">Pigtracks primary</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #156082;">
+          <span class="text-white text-sm font-semibold">Teal</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-sm font-semibold">#156082</div>
+          <div class="text-xs text-gray-400">Pigtracks secondary</div>
+        </div>
+      </div>
+      <div>
+        <div class="swatch" style="background: #E97132;">
+          <span class="text-white text-sm font-semibold">Orange</span>
+        </div>
+        <div class="mt-2">
+          <div class="font-mono text-sm font-semibold">#E97132</div>
+          <div class="text-xs text-gray-400">Pigtracks accent</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold uppercase tracking-wider text-gray-400 mb-6">Typography</h2>
+    <div class="grid grid-cols-2 gap-8">
+      <div>
+        <h3 class="font-bold mb-2">Primary — Inter</h3>
+        <p class="text-sm text-gray-500">All headings, body text, UI elements.</p>
+        <div class="mt-3 space-y-1">
+          <div class="text-2xl font-black">Black 900 — Hero headings</div>
+          <div class="text-lg font-bold">Bold 700 — Section headings</div>
+          <div class="text-base font-semibold">Semibold 600 — Card titles</div>
+          <div class="text-base">Regular 400 — Body text</div>
+          <div class="text-sm font-light">Light 300 — Captions</div>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold mb-2">Monospace — JetBrains Mono</h3>
+        <p class="text-sm text-gray-500">Technical specs, code, data values.</p>
+        <div class="mt-3 space-y-1 font-mono">
+          <div class="text-base font-medium">&le;100ms</div>
+          <div class="text-base">192.168.4.1</div>
+          <div class="text-sm">info@scistail.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="border-t border-gray-200 pt-6 mt-12 text-xs text-gray-400 flex justify-between">
+    <span>&copy; 2026 Scissortail Technology</span>
+    <span>Brand Palette v1.0 — Confidential</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — Scissortail Technology</title>
+  <meta name="description" content="Explore Scissortail's pipeline monitoring products: Geode RTD, external geophone, ELF swamp coil, Pigtracks cloud platform, and more.">
+  <link rel="icon" type="image/png" href="assets/images/geode_logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        gold: { DEFAULT: '#C8A84E', light: '#D4BA6A', pale: '#E8D9A0' },
+        charcoal: '#1A1A1A',
+        dark: '#2A2A2A',
+      }}}
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900" x-data="{ mobileOpen: false }">
+
+  <!-- Navigation — centered logo with links below -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-black/90" x-data="{ scrolled: false }" @scroll.window="scrolled = (window.scrollY > 60)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center pt-4 pb-2 transition-all duration-300" :class="scrolled ? 'pt-2 pb-1' : 'pt-4 pb-2'">
+        <a href="index.html">
+          <img src="assets/images/scissortail.png" alt="Scissortail Technology" class="w-auto transition-all duration-300" :class="scrolled ? 'h-24' : 'h-[130px]'">
+        </a>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden absolute right-4 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path x-show="mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden md:flex items-center justify-center gap-10 pb-3 border-t border-white/5 pt-2">
+        <a href="index.html" class="text-gray-400 hover:text-white text-sm tracking-wide uppercase transition">Home</a>
+        <a href="products.html" class="text-wheat font-medium text-sm tracking-wide uppercase">Products</a>
+        <a href="about.html" class="text-gray-400 hover:text-white text-sm tracking-wide uppercase transition">About</a>
+        <a href="index.html#contact" class="btn-primary text-sm !py-1.5 !px-5">Contact Us</a>
+      </div>
+      <div class="mobile-menu md:hidden" :class="mobileOpen ? 'open' : ''">
+        <div class="pb-4 space-y-2 border-t border-white/5 pt-3">
+          <a href="index.html" class="block px-3 py-2 text-gray-400 text-sm">Home</a>
+          <a href="products.html" class="block px-3 py-2 text-wheat font-medium text-sm">Products</a>
+          <a href="about.html" class="block px-3 py-2 text-gray-400 text-sm">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient pt-44 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="accent-line mb-6"></div>
+      <br>
+      <br>
+      <h1 class="text-4xl sm:text-5xl font-black text-white">Products</h1>
+      <p class="mt-4 text-gray-400 text-lg max-w-2xl">Field-proven hardware and cloud software for pipeline inline inspection. Every product is designed to work together as a system.</p>
+    </div>
+  </section>
+
+  <!-- Filter Tags -->
+  <section class="py-6 bg-gray-50 border-b border-gray-200 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap gap-3">
+      <a href="#hardware" class="tag tag-gold">Hardware</a>
+      <a href="#sensors" class="tag tag-gold">Sensors</a>
+      <a href="#software" class="tag tag-dark">Software</a>
+      <a href="#coming-soon" class="tag tag-green">Coming Soon</a>
+    </div>
+  </section>
+
+  <!-- Flagship: Geode RTD -->
+  <section id="geode" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-gold">Hardware</span>
+            <span class="tag tag-gold">Flagship</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-black">Geode RTD</h2>
+          <p class="text-lg mt-1 italic" style="color: #7BA7CC;">/jee-ohd/</p>
+          <p class="mt-4 text-gray-600 text-lg">The Remote Tracking Device that replaces your entire AGM fleet. Four sensor channels, LTE-M connectivity, solar power, and cloud integration in one ruggedized enclosure.</p>
+
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-black">Sensors</div>
+              <div class="text-sm text-gray-600 mt-1">ELF Coil, Geophone, Magnetometer, MEMS Accelerometer</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-black">Connectivity</div>
+              <div class="text-sm text-gray-600 mt-1">LTE-M, WiFi AP, GNSS</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-black">Resolution</div>
+              <div class="text-sm text-gray-600 mt-1">High-resolution, multi-kilohertz sampling</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-black">Power</div>
+              <div class="text-sm text-gray-600 mt-1">Li-Ion + 3W Solar, intelligent sleep modes</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-black">Timestamp</div>
+              <div class="text-sm text-gray-600 mt-1 font-mono">&le;100ms NTP-synced RTC</div>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="text-sm font-semibold text-black">Enclosure</div>
+              <div class="text-sm text-gray-600 mt-1">IP67, UV-resistant, field-ruggedized</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn-primary mt-8">Request Quote</a>
+        </div>
+        <div>
+          <img src="assets/images/image37.png" alt="Geode RTD" class="rounded-2xl shadow-xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sensors -->
+  <section id="sensors" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="accent-line mb-6"></div>
+      <h2 class="text-3xl font-bold text-black mb-12">External Sensors</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- External Geophone -->
+        <div id="geophone" class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 bg-gradient-to-br from-black to-dark flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="tag tag-gold">Sensor</span>
+            <h3 class="mt-3 text-xl font-bold text-black">External Geophone</h3>
+            <p class="mt-2 text-sm text-gray-600">Traditional moving-coil geophone for direct ground coupling. Industry-standard sensitivity with weatherproof housing. Connects to Geode RTD via rugged M12 connector.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>10 Hz natural frequency</li>
+              <li>Stainless steel spike mount</li>
+              <li>Direct-burial rated</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ELF Swamp Coil -->
+        <div id="elf-coil" class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 bg-gradient-to-br from-dark to-gold flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="tag tag-gold">Sensor</span>
+            <h3 class="mt-3 text-xl font-bold text-black">ELF Swamp Coil</h3>
+            <p class="mt-2 text-sm text-gray-600">High-sensitivity external ELF detection coil for challenging terrain. Optimized for wet ground, swamp crossings, and deep-buried pipeline. Extended detection range vs. internal coil.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>15&ndash;35 Hz tuned bandwidth</li>
+              <li>Waterproof potted construction</li>
+              <li>10ft+ detection range in wet soil</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4-20mA Interface -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-48 bg-gradient-to-br from-black to-charcoal-light flex items-center justify-center">
+            <svg class="w-20 h-20 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="tag tag-gold">Sensor</span>
+            <h3 class="mt-3 text-xl font-bold text-black">4&ndash;20mA Sensor Interface</h3>
+            <p class="mt-2 text-sm text-gray-600">Universal analog input for third-party industrial sensors. Connect any 4&ndash;20mA pressure transducer, flow meter, or level sensor to the Geode for remote monitoring.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>High-resolution analog input</li>
+              <li>Loop-powered or external</li>
+              <li>Configurable sample rate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software -->
+  <section id="software" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="accent-line mb-6"></div>
+      <h2 class="text-3xl font-bold text-black mb-12">Software Platform</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Pigtracks -->
+        <div id="pigtracks" class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-56 flex items-center justify-center" style="background: linear-gradient(135deg, #0E2841 0%, #156082 50%, #1a7a9e 100%);">
+            <div class="text-center">
+              <div class="text-4xl font-black text-white tracking-tight">PIGTRACKS</div>
+              <div class="text-sm font-semibold mt-1" style="color: #E97132;">Cloud Monitoring Platform</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="tag tag-dark">Software</span>
+            <h3 class="mt-3 text-xl font-bold text-black">Pigtracks Web Application</h3>
+            <p class="mt-2 text-sm text-gray-600">The command center for remote pig tracking. Real-time waveform charts, fleet health dashboard, passage time marking, and project-based device management. Azure IoT Hub backbone with enterprise-grade security.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>Live scrolling sensor waveform charts</li>
+              <li>Click-to-mark passage timestamps</li>
+              <li>Fleet map with device health overlay</li>
+              <li>Power state control (Sentinel/Standby/Stream)</li>
+              <li>Exportable passage and run reports</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Local WebUI -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <div class="h-56 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+            <div class="text-center">
+              <div class="font-mono text-green-400 text-lg">192.168.4.1</div>
+              <div class="text-gray-400 text-sm mt-1">Geode Local WebUI</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="tag tag-dark">Software</span>
+            <h3 class="mt-3 text-xl font-bold text-black">On-Device Web Interface</h3>
+            <p class="mt-2 text-sm text-gray-600">Every Geode hosts a WiFi access point with a built-in web dashboard. Connect from your phone in the field to verify deployment, check sensors, view live data, and configure the device &mdash; no cloud required.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>WiFi AP auto-broadcasts on power-on</li>
+              <li>Battery, GPS, LTE, sensor diagnostics</li>
+              <li>Live waveform preview</li>
+              <li>Device configuration and firmware info</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon -->
+  <section id="coming-soon" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="accent-line mb-6"></div>
+      <h2 class="text-3xl font-bold text-black mb-4">In <span style="color: #7BA7CC;">Development</span></h2>
+      <p class="text-gray-600 mb-12">Next-generation products expanding the Scissortail ecosystem.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Geode Mini -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 relative">
+          <div class="absolute top-4 right-4 z-10"><span class="tag tag-green">Coming 2027</span></div>
+          <div class="h-48 bg-gradient-to-br from-gold/80 to-gold flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-black">Geode Mini</h3>
+            <p class="mt-2 text-sm text-gray-600">Ultra-compact recorder-only variant. No LTE &mdash; pure SD card logging with extended battery life. Drop, record, retrieve. For operators who need 50+ units on a single run at minimum cost.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>Dual-channel (geophone + ELF)</li>
+              <li>CR123A lithium batteries (2+ week standby)</li>
+              <li>USB-C data extraction</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Passage Detection AI -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 relative">
+          <div class="absolute top-4 right-4 z-10"><span class="tag tag-green">Coming 2027</span></div>
+          <div class="h-48 bg-gradient-to-br from-dark to-dark-light flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-black">AutoPick AI</h3>
+            <p class="mt-2 text-sm text-gray-600">On-device machine learning for automatic pig passage detection. Trained on thousands of real passage events. Flags candidate passages in real time while the human tracker retains final authority.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>On-device edge inference</li>
+              <li>ELF envelope + mag zero-crossing fusion</li>
+              <li>Confidence scoring per candidate</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Repeater Node -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 relative">
+          <div class="absolute top-4 right-4 z-10"><span class="tag tag-green">Coming 2027</span></div>
+          <div class="h-48 bg-gradient-to-br from-black to-dark flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.858 15.355-5.858 21.213 0"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-black">Mesh Repeater Node</h3>
+            <p class="mt-2 text-sm text-gray-600">Solar-powered LoRa relay for dead-zone coverage. Place between Geode RTDs to bridge LTE coverage gaps in remote pipeline corridors. Transparent data forwarding to the nearest LTE-connected RTD.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>LoRa 915 MHz, 5+ mile range</li>
+              <li>Self-forming mesh topology</li>
+              <li>Solar + supercapacitor power</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pipeline Leak Sensor -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 relative">
+          <div class="absolute top-4 right-4 z-10"><span class="tag tag-green">Concept</span></div>
+          <div class="h-48 bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-black">Sentinel Leak Monitor</h3>
+            <p class="mt-2 text-sm text-gray-600">Permanent-install acoustic leak detection using the Geode platform. Continuous low-power monitoring of pipeline acoustic signatures with cloud-based anomaly detection for early leak identification.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>Always-on acoustic monitoring</li>
+              <li>Cloud-trained anomaly baseline</li>
+              <li>Regulatory compliance reporting</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Corrosion Coupon Reader -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 relative">
+          <div class="absolute top-4 right-4 z-10"><span class="tag tag-green">Concept</span></div>
+          <div class="h-48 bg-gradient-to-br from-black-light to-charcoal flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-black">CP Monitor</h3>
+            <p class="mt-2 text-sm text-gray-600">Remote cathodic protection monitoring. Reads pipe-to-soil potential via the Geode's 4&ndash;20mA input and streams CP data to the cloud. Eliminates manual CP survey truck rolls.</p>
+            <ul class="mt-4 space-y-1 text-sm text-gray-500">
+              <li>Cu/CuSO4 reference electrode interface</li>
+              <li>Continuous CP potential trending</li>
+              <li>NACE SP0169 compliance data export</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 hero-gradient">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="text-3xl font-bold text-white">White-Label Ready</h2>
+      <p class="mt-4 text-gray-400 text-lg">Your brand. Our hardware. Geode can be manufactured under your label. We handle firmware, cloud, and support. You focus on your customers.</p>
+      <a href="index.html#contact" class="btn-primary mt-8">Discuss Partnership</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0A0A0A] text-gray-500 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/scissortail.png" alt="Scissortail Technology" class="h-16 w-auto">
+          </div>
+          <p class="text-sm">Pipeline intelligence, delivered.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm">Products</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#geode" class="hover:text-white transition">Geode RTD</a></li>
+            <li><a href="#geophone" class="hover:text-white transition">External Geophone</a></li>
+            <li><a href="#elf-coil" class="hover:text-white transition">ELF Swamp Coil</a></li>
+            <li><a href="#pigtracks" class="hover:text-white transition">Pigtracks Platform</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3 text-sm">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>info@scistail.com</li>
+            <li>scistail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/5 mt-8 pt-8 text-sm text-center">
+        &copy; 2026 Scissortail Technology. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
